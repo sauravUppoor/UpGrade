@@ -13,9 +13,6 @@ if($con == false) {
 
 // Using assessment_app database
 $sql = "USE assessment_app;";
-if(mysqli_query($con, $sql)) {
-    
-}
-
+mysqli_query($con, $sql);
 
 ?>

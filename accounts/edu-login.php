@@ -43,7 +43,9 @@ session_start();
             <?php
         }
         else {
+
             // Fetch password from the query executed above
+            // Loop through the rows retrieved from the query
             $row = mysqli_fetch_assoc($query);
             $dbpass = $row["password"];
             
