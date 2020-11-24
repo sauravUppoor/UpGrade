@@ -65,7 +65,7 @@ session_start();
                 ?>
                     <script>
                         // Go to dashboard of educator
-                        location.replace('../templates/edu-dashboard.php');
+                        location.replace('../educator/edu-dashboard.php');
                     </script>
                 <?php
             }
@@ -77,7 +77,7 @@ session_start();
                 <?php
             }
         }
-       
+    
     }
 ?>
 <body>
