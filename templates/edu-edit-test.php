@@ -316,7 +316,8 @@ $id = $_GET['id'];
                     url: "backend-edit-quest.php",
                     type: "post",
                     data: {
-                        deleteid: deleteid
+                        deleteid: deleteid,
+                        id: <?php echo $id; ?>
                     },
                     success: function(data, status) {
                         elem.closest('tr.text-center').remove();
@@ -374,7 +375,8 @@ $id = $_GET['id'];
                     choice_b: choice_b,
                     choice_c: choice_c,
                     choice_d: choice_d,
-                    correct_choice: correct_choice
+                    correct_choice: correct_choice,
+                    id: <?php echo $id; ?>
                     
 
                 },

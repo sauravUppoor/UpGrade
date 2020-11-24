@@ -4,6 +4,7 @@ require_once "../connection.php";
 
 extract($_POST);
 
+// Display all the questions belonging to a particular test
 if(isset($_POST['readQ'])) {
     $test_id = $_POST['id'];
     $sql = "SELECT * FROM question WHERE test_id='$test_id';";
@@ -30,14 +31,35 @@ if(isset($_POST['readQ'])) {
     echo $data;
 }
 
+// Delete a question with id 'deleteid'
 if(isset($_POST['deleteid'])) {
     $question_id = $_POST['deleteid'];
-    
+    $test_id = $_POST['id'];
+
+    //Fetching marks of the question to be deleted
+    $sql = "SELECT * FROM question WHERE question_id='$question_id';";
+    $query = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($query);
+    $marks = $row['marks'];
+
+    // Fetch marks of the respective test
+    $sql = "SELECT * FROM test WHERE test_id='$test_id';";
+    $query = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($query);
+
+    $currentMarks = $row['total_marks'];
+    $currentMarks -= $marks;
+
+    // Update the current marks in database
+    $sql = "UPDATE test SET total_marks='$currentMarks' WHERE test_id='$test_id';";
+    mysqli_query($con, $sql);
+
     $sql = "DELETE FROM question WHERE question_id='$question_id';";
     $query = mysqli_query($con, $sql);
 
 }
 
+// Inserting a question
 if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks']) && isset($_POST['choice_a']) && isset($_POST['choice_b']) && isset($_POST['correct_choice'])) {
 
     $test_id = $_POST['test_id'];
@@ -53,6 +75,7 @@ if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks
     $query = mysqli_query($con, $sql);
     $question_no = mysqli_num_rows($query) + 1;
 
+    // Inserting question data
     $sql = "INSERT INTO question (test_id, marks, question_no, statement, choice_a, choice_b, choice_c, choice_d, correct_choice) VALUES ('$test_id', '$marks', '$question_no', '$statement', '$choice_a', '$choice_b', '$choice_c', '$choice_d', '$correct_choice');";
 
     $query = mysqli_query($con, $sql);
@@ -64,6 +87,18 @@ if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks
         $question_id = $row['question_id'];
     }
 
+    // Fetch marks of the respective test
+    $sql = "SELECT * FROM test WHERE test_id='$test_id';";
+    $query = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($query);
+
+    $currentMarks = $row['total_marks'];
+    $currentMarks += $marks;
+
+    // Update the current marks in database
+    $sql = "UPDATE test SET total_marks='$currentMarks' WHERE test_id='$test_id';";
+    mysqli_query($con, $sql);
+    
     $data = '<tr class="text-center">
             <td>'.$question_no.'</td>
             <td>'.$marks.'</td>
@@ -114,12 +149,23 @@ if(isset($_POST['hidden_question_id'])) {
     $choice_d = $_POST['choice_d'];
     $correct_choice = $_POST['correct_choice'];
     $hidden_question_id = $_POST['hidden_question_id'];
-
+    $test_id = $_POST['id'];
       
     $sql = "UPDATE question SET marks='$marks', statement='$statement', choice_a='$choice_a', choice_b='$choice_b', choice_c='$choice_c', choice_d='$choice_d', correct_choice='$correct_choice' WHERE question_id='$hidden_question_id'; ";
 
     mysqli_query($con, $sql);
 
+    // Fetch marks of the respective test
+    $sql = "SELECT * FROM test WHERE test_id='$test_id';";
+    $query = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($query);
+
+    $currentMarks = $row['total_marks'];
+    $currentMarks += $marks;
+
+    // Update the current marks in database
+    $sql = "UPDATE test SET total_marks='$currentMarks' WHERE test_id='$test_id';";
+    mysqli_query($con, $sql);
 
 }
 
