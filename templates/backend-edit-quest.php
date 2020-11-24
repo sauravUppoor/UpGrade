@@ -57,6 +57,13 @@ if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks
 
     $query = mysqli_query($con, $sql);
 
+    $sql = "SELECT * FROM question WHERE test_id='$test_id' ORDER BY question_id DESC LIMIT 1";
+
+    $query = mysqli_query($con, $sql);
+    while($row = mysqli_fetch_assoc($query)) {
+        $question_id = $row['question_id'];
+    }
+
     $data = '<tr class="text-center">
             <td>'.$question_no.'</td>
             <td>'.$marks.'</td>
@@ -66,8 +73,8 @@ if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks
             <td>'.$choice_c.'</td>
             <td>'.$choice_d.'</td>
             <td>'.$correct_choice.'</td>
-            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$test_id.', this)">Delete</button> </td>
-            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$test_id.')">Edit</button> </td>
+            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$question_id.', this)">Delete</button> </td>
+            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$question_id.', this)">Edit</button> </td>
             </tr>';
     echo $data;
 }
