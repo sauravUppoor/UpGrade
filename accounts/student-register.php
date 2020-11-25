@@ -10,7 +10,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educator Sign Up</title>
+    <title>Student Sign Up</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../static/css/form.css">
@@ -35,13 +35,13 @@ session_start();
         $email = $_POST['email'];
         $number = $_POST['number'];
 
-       
+    
         // Hashing the passwords
         $pass = password_hash($password, PASSWORD_BCRYPT);
         $cpass = password_hash($cpassword, PASSWORD_BCRYPT);
 
         // Checking for duplicate emails
-        $emailQuery = "SELECT * FROM teacher WHERE email = '$email';";
+        $emailQuery = "SELECT * FROM student WHERE email = '$email';";
         $query = mysqli_query($con, $emailQuery);
         $emailCount = mysqli_num_rows($query);
 
@@ -60,7 +60,7 @@ session_start();
             }
             else {
                 // Enter data in database
-                $insertQuery = "INSERT INTO teacher (email, full_name, password, cpassword, contact_no) VALUES ('$email', '$username', '$pass', '$cpass', '$number');";
+                $insertQuery = "INSERT INTO student (email, full_name, password, cpassword, contact_no) VALUES ('$email', '$username', '$pass', '$cpass', '$number');";
 
                 if(mysqli_query($con, $insertQuery)) {
                     ?>
@@ -90,7 +90,7 @@ session_start();
 <body>
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-form">
-            <h1>EDUCATOR Sign Up</h1>
+            <h1>STUDENT Sign Up</h1>
             <div class="con-inputs">
                 <div class="con-input">
                     <label for="name">
@@ -149,7 +149,7 @@ session_start();
                 </div>
 
                 <div class="con-already">
-                    <a href="./edu-login.php">
+                    <a href="./student-login.php">
                         Already have an account? Log in
                     </a>
                 </div>

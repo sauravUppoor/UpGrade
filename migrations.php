@@ -97,10 +97,27 @@ else {
 
 echo "<br>";
 
+//Student
+$sql = "CREATE TABLE IF NOT EXISTS student (
+    student_id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(40) NOT NULL,
+    full_name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    cpassword VARCHAR(255) NOT NULL,
+    contact_no VARCHAR(255) NOT NULL,
+    PRIMARY KEY (student_id),
+    UNIQUE (email)
+    );";
+if(mysqli_query($con, $sql)) {
+    echo "Student table created successfully!";
+}
+else {
+    echo "Error creating table Student: " .mysqli_error($con);
+}
+
+echo "<br>";
+
+
 // Add more tables here
-
-
-
-
 
 ?>
