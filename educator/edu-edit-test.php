@@ -288,7 +288,6 @@ $id = $_GET['id'];
             const choice_d = $('#choice_d').val();
             const correct_choice = $('#correct_choice').val();
             const test_id = <?php echo $id; ?>;
-            alert("In");
             $.ajax({
                 url: "backend-edit-quest.php",
                 type: "post",

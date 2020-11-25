@@ -150,7 +150,14 @@ if(isset($_POST['hidden_question_id'])) {
     $correct_choice = $_POST['correct_choice'];
     $hidden_question_id = $_POST['hidden_question_id'];
     $test_id = $_POST['id'];
-      
+    
+    // Subtract the total marks in tests by marks of question_id
+    $sql = "SELECT * FROM question WHERE question_id='$hidden_question_id';";
+    $query = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($query);
+    $removeMarks = $row['marks'];
+
+
     $sql = "UPDATE question SET marks='$marks', statement='$statement', choice_a='$choice_a', choice_b='$choice_b', choice_c='$choice_c', choice_d='$choice_d', correct_choice='$correct_choice' WHERE question_id='$hidden_question_id'; ";
 
     mysqli_query($con, $sql);
@@ -162,6 +169,7 @@ if(isset($_POST['hidden_question_id'])) {
 
     $currentMarks = $row['total_marks'];
     $currentMarks += $marks;
+    $currentMarks -= $removeMarks;
 
     // Update the current marks in database
     $sql = "UPDATE test SET total_marks='$currentMarks' WHERE test_id='$test_id';";
