@@ -1,11 +1,9 @@
 <?php
-
 session_start();
 
 if(!isset($_SESSION['name'])) {
     header('location:../accounts/student-login.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +12,40 @@ if(!isset($_SESSION['name'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educator Dashboard</title>
+    <?php
+    require_once "../connection.php";
+
+    if(isset($_POST['submit'])){
+        $testid=$_POST['testid']; 
+        $_SESSION['testid']= $testid;
+
+        ?>
+
+        <script>
+            location.replace('../student/student-test.php?tid=<?php 
+                            echo $res['test_id']; ?>');
+        </script>
+
+    <?php
+    }
+     ?>
+  
 </head>
 <body>
     <h1>Welcome, <?php echo $_SESSION['name']; ?> !</h1>
     <a href="../accounts/logout.php">Logout</a>
     <br><br>
-    <a href="./edu-create-test.php">Take a Test</a>
+
+    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+        <div class="con-input">
+        <input type="text" id="testid" name="testid" placeholder="Test ID"><br><br>
+        <label for="testid"></label>
+        </div>
+        
+        <button type="submit" name="submit" value="Take Test" >Take a Test</button>
+        
+    </form>
+
     <br><br>
     <a href="./edu-test-archives.php">Test Results</a>
 </body>
