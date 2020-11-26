@@ -10,7 +10,7 @@
 body {
     --primary: 25,91,255;
     --color: 44, 62, 80;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     background: #f1f3f6;
@@ -23,6 +23,7 @@ h1 {
 }
 
 .con-form {
+    margin: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -30,7 +31,7 @@ h1 {
     flex-direction: column;
     border-radius: 40px;
     padding: 35px;
-    margin: 30px;
+    /* margin: 30px; */
     max-width: 450px;
     background: #fff;
     box-shadow: 0px 15px 20px 5px rgba(0,0,0,0.15);

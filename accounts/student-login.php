@@ -81,9 +81,9 @@ session_start();
     }
 ?>
 <body>
-    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+    <form style="width=500px;" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-form">
-            <h1><span style = "color: #6555df">STUDENT</span> LOGIN</h1>
+        <h1><span style = "color: #6555df; font-weight:700;">STUDENT</span> <span style="font-weight:400;">LOGIN</span></h1>
             <div class="con-inputs">
                 <div class="con-input">
                     <label for="email">
