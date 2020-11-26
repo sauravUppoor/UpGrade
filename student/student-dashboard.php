@@ -15,15 +15,15 @@ if(!isset($_SESSION['name'])) {
     <?php
     require_once "../connection.php";
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])) {
         $testid=$_POST['testid']; 
         $_SESSION['testid']= $testid;
 
         ?>
-
+        
         <script>
-            location.replace('../student/student-test.php?tid=<?php 
-                            echo $res['test_id']; ?>');
+            location.replace('student-test.php?id=<?php 
+                            echo $_SESSION['testid']; ?>');
         </script>
 
     <?php
