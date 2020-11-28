@@ -12,34 +12,81 @@ $id = $_GET['id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Test</title>
 
-    <?php include "../static/links/bootstrap.php"; ?>
+    <?php include "../static/links/bootstrap.php" ?>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/edu-dashboard.css">
+
+    <!-- IonIcons -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <style>
+        * {
+            transition: all 0.25s ease-in !important;
+        }
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .bg-none, .bg-none:hover, .bg-none:active {
+            background-color: transparent;
+            border: none;
+        }
+
+        .btn-info {
+            padding: 10px 20px;
+            background-color :#6555df;
+            border: 0px;
+            border-radius: 18px;
+            margin-right: 10px;
+            color: #FFF;
+            font-size: 1.1rem;
+            box-shadow: 0px 8px 16px 0px rgba(101, 85, 223, 0.5);
+        }
+
+        .btn-info:hover, .btn-info:visited, .btn-info:active {
+            transform: translate(0px,5px);
+            box-shadow: none;
+            background-color :#6555df;
+        }
+
+    </style>
 
 </head>
 <body>
-    <br><br>
+    <?php
+        include "../templates/navbar.php";
+    ?>
+    <br>
+    <div class="contain">
+        <a href="edu-test-archives.php"> <ion-icon name="arrow-back-outline" size="large"></ion-icon> </a>
+        <h1>
+            <?php 
+                
+                $sql = "SELECT * FROM test WHERE test_id='$id';";
+                $query = mysqli_query($con, $sql);
+                if($query) {
+                    $row = mysqli_fetch_assoc($query);
+                    echo $row['name'];
+                }
+                else {
+                    ?>
+                        <script>
+                            alert("Can't find test!");
+                        </script>
+                    <?php
+                }
+            ?>
+                Test
+        </h1>
+    </div>
     <div class="container">
         <div class="col-lg-12">
-
-
-            <h1>
-                <?php 
-                    
-                    $sql = "SELECT * FROM test WHERE test_id='$id';";
-                    $query = mysqli_query($con, $sql);
-                    if($query) {
-                        $row = mysqli_fetch_assoc($query);
-                        echo $row['name'];
-                    }
-                    else {
-                        ?>
-                            <script>
-                                alert("Can't find test!");
-                            </script>
-                        <?php
-                    }
-                ?>
-                 Test
-            </h1>
             
             <br>
 
@@ -83,8 +130,8 @@ $id = $_GET['id'];
                                 <td><?php echo $res['choice_c']; ?></td>
                                 <td><?php echo $res['choice_d']; ?></td>
                                 <td><?php echo $res['correct_choice'] ?></td>
-                                <td> <button class="btn btn-danger" onclick="deleteQuestion(<?php echo $res['question_id'] ?>, this)">Delete</button> </td>
-                                <td> <button class="btn btn-success" onclick="getQuestionInfo(<?php echo $res['question_id'] ?>, this)" >Edit</button> </td>
+                                <td> <button class="btn btn-danger bg-none" onclick="deleteQuestion(<?php echo $res['question_id'] ?>, this)"> <ion-icon name="trash-outline" size="large" class="red"></ion-icon> </button> </td>
+                                <td> <button class="btn btn-success bg-none" onclick="getQuestionInfo(<?php echo $res['question_id'] ?>, this)"> <ion-icon name="create-outline" size="large" class="green"></ion-icon> </button> </td>
                             </tr>
                             <?php
                             $number++;
@@ -159,13 +206,13 @@ $id = $_GET['id'];
                                 <div class="container my-3">
                                     <div class="col-md-12 text-center">
                                         <button type="button" 
-                                                class="btn btn-success"
+                                                class="btn btn-info"
                                                 data-dismiss="modal" 
                                                 name="addQuestion"
                                                 onclick="addQ()">Submit</button>
-                                        <button type="button" 
+                                        <!-- <button type="button" 
                                                 class="btn btn-danger" 
-                                                data-dismiss="modal">Cancel</button>
+                                                data-dismiss="modal">Cancel</button> -->
                                     </div>
                                 </div>
                                 </form>
@@ -240,13 +287,13 @@ $id = $_GET['id'];
                                 <div class="container my-3">
                                     <div class="col-md-12 text-center">
                                         <button type="button" 
-                                                class="btn btn-success"
+                                                class="btn btn-info"
                                                 data-dismiss="modal" 
                                                 name="updateQuestion"
                                                 onclick="updateQ()">Update</button>
-                                        <button type="button" 
+                                        <!-- <button type="button" 
                                                 class="btn btn-danger" 
-                                                data-dismiss="modal">Cancel</button>
+                                                data-dismiss="modal">Cancel</button> -->
                                         <input type="hidden" id="hidden_question_id">
                                     </div>
                                 </div>

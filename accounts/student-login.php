@@ -14,7 +14,8 @@ session_start();
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../static/css/form.css">
-
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    
     <!-- JS Script -->
     <script src="script.js"></script>
 
@@ -25,6 +26,7 @@ session_start();
 
 <?php
     require_once "../connection.php";
+    include "../templates/navbar.php";
 
     if(isset($_POST['submit'])) {
         $email = $_POST['email'];
@@ -81,6 +83,7 @@ session_start();
     }
 ?>
 <body>
+    <br>
     <form style="width=500px;" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-form">
         <h1><span style = "color: #6555df; font-weight:700;">STUDENT</span> <span style="font-weight:400;">LOGIN</span></h1>

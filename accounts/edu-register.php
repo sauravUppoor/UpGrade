@@ -14,7 +14,7 @@ session_start();
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../static/css/form.css">
-    <link rel="stylesheet" href="../static/css/navbar.php">
+    <link rel="stylesheet" href="../static/css/navbar.css">
 
     <!-- JS Script -->
     <script src="script.js"></script>

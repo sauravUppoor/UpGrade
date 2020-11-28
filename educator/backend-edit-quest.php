@@ -22,8 +22,8 @@ if(isset($_POST['readQ'])) {
             <td>'.$res['choice_c'].'</td>
             <td>'.$res['choice_d'].'</td>
             <td>'.$res['correct_choice'].'</td>
-            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$res['question_id'].', this)">Delete</button> </td>
-            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$res['question_id'].', this)">Edit</button> </td>
+            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$res['question_id'].', this)"><ion-icon name="trash-outline" size="large" class="red"></ion-icon></button> </td>
+            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$res['question_id'].', this)"><ion-icon name="create-outline" size="large" class="green"></ion-icon></button> </td>
             </tr>';
         $number++;
     }
@@ -108,8 +108,8 @@ if(isset($_POST['test_id']) && isset($_POST['statement']) && isset($_POST['marks
             <td>'.$choice_c.'</td>
             <td>'.$choice_d.'</td>
             <td>'.$correct_choice.'</td>
-            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$question_id.', this)">Delete</button> </td>
-            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$question_id.', this)">Edit</button> </td>
+            <td> <button class="btn btn-danger" onclick="deleteQuestion('.$question_id.', this)"><ion-icon name="trash-outline" size="large" class="red"></ion-icon></button> </td>
+            <td> <button class="btn btn-success" onclick="getQuestionInfo('.$question_id.', this)"><ion-icon name="create-outline" size="large" class="green"></ion-icon></button> </td>
             </tr>';
     echo $data;
 }

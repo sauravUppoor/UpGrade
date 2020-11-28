@@ -14,7 +14,7 @@ session_start();
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../static/css/form.css">
-    <link rel="stylesheet" href="../static/css/navbar.php">
+    <link rel="stylesheet" href="../static/css/navbar.css">
     <!-- JS Script -->
     <script src="script.js"></script>
 
@@ -85,7 +85,7 @@ session_start();
     <br>
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-form">
-            <h1><span style = "color: #6555df; font-weight:700;">EDUCATOR</span> <span style="font-weight:400;">LOGIN</span></h1>
+            <h1><span style = "color: #6555df; font-weight:700; font-size:40px">EDUCATOR</span> <span style="font-weight:400; font-size: 40px">LOGIN</span></h1>
             <div class="con-inputs">
                 <div class="con-input">
                     <label for="email">

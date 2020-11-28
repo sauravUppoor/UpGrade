@@ -1,0 +1,38 @@
+.contain {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.contain h1 {
+    color: #333333;
+}
+
+.contain-btns {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.btn-1 {
+    border: 0px;
+    border-radius: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 30px 20px;
+    margin: 25px;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #6555df;
+    text-align: center;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
+    min-width: 175px;
+    min-height: 150px;
+}
+
+.btn-1:hover {
+    background-color: #6555df;
+    color: #FFF;
+    transform: translate(0px,5px);
+    box-shadow: 0px 5px 10px 0px rgba(101, 85, 223, 0.5);
+}

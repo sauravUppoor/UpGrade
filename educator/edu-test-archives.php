@@ -13,16 +13,38 @@ session_start();
     <title>Test Archives</title>
 
     <?php include "../static/links/bootstrap.php" ?>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/edu-dashboard.css">
+
+    <!-- IonIcons -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <style>
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
 
 </head>
 <body>
-    <br><br>
-    
+    <?php
+        include "../templates/navbar.php";
+    ?>
+    <br>
+    <div class="contain">
+        <a href="edu-dashboard.php"> <ion-icon name="arrow-back-outline" size="large"></ion-icon> </a>
+        <h1>Test Archives</h1>
+    </div>
+
     <div class="container">
         <div class="col-lg-12">
-
-            <h1>Test Archives</h1>
-            <br><br>
+            <br>
             <table class="table table-striped table-hover table-bordered">
             
                 <tr class="text-white bg-dark text-center">
@@ -48,20 +70,20 @@ session_start();
                     <td> <?php echo $res['test_id']; ?> </td>
                     <td> <?php echo $res['name']; ?></td>
                     <td> <?php echo $res['total_marks']; ?> </td>
-                    <td> <button class="btn btn-danger" >
+                    <td>
                         <a href="delete.php?id=<?php 
                             echo $res['id']; ?>"> 
                             <div class="text-white">
-                                Delete
+                            <ion-icon name="trash-outline" size="large" class="red"></ion-icon>
                             </div> </a>
-                    </button></td>
-                    <td> <button class="btn btn-success" >
+                    </td>
+                    <td>
                         <a href="edu-edit-test.php?id=<?php 
                             echo $res['test_id']; ?>"> 
                             <div class="text-white">
-                            Edit
+                            <ion-icon name="create-outline" size="large" class="green"></ion-icon>
                             </div> </a>
-                    </button></td>
+                    </td>
                 
                 </tr>
 

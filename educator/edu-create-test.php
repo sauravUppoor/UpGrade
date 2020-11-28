@@ -14,6 +14,20 @@ session_start();
     <title>Create a Test</title>
 
     <?php include "../static/links/bootstrap.php" ?>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/edu-dashboard.css">
+    <style>
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+
+    <!-- IonIcons -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </head>
 
 <?php
@@ -42,94 +56,34 @@ if(isset($_POST['submit'])) {
 ?>
 
 <body>
-    <br><br><br>
 
+    <?php
+        include "../templates/navbar.php";
+    ?>
+    <br>
+    <div class="contain">
+        <a href="edu-dashboard.php"> <ion-icon name="arrow-back-outline" size="large"></ion-icon> </a>
+        <h1>Test Creation</h1>
+    </div>
+    
     <div class="col-lg-6 m-auto">
-        <h2>Test Creation</h2>
+        
         <form action="" method="POST">
-            <div class="card">
-                <label for="">Test Name</label>
-                <input type="text" name="tname" class="form-control"><br>
-
-                <!-- Show questions here  -->
-
-                <!-- Add question button -->
-                <!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addQModal">Add Question</button>
-                <br> -->
-                <button class="btn btn-success"
-                        type="submit"
-                        name="submit">Create Test</button>
+            <div class="con-forms">
+                <div class="con-inputs">
+                    <div class="con-input">
+                        <label for="">Test Name</label>
+                        <input type="text" name="tname" class="form-control"><br>
+                    </div>
+                </div>
+                
+                <footer>
+                    <button class="btn-signin"
+                            type="submit"
+                            name="submit">Create Test</button>
+                </footer>
             </div>
         </form>
     </div>
-    
-    <!-- Question modal -->
-    <!-- <div id="addQModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-             Modal content-->
-            <!-- <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn btn-default text-left" data-dismiss="modal">&times;</button>
-                <h5 class="modal-header">Question Panel</h5>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <form action="" method="POST">
-
-                    <label for="">Question Statement</label>
-                    <input type="text" 
-                            name="statement" 
-                            class="form-control"
-                            required><br>
-
-                    <label for="">Marks</label>
-                    <input type="number" 
-                            name="marks" 
-                            class="form-control" 
-                            requried><br>
-
-                    <label for="">Option A</label>
-                    <input type="text" 
-                            name="choice_a" 
-                            class="form-control" 
-                            required><br>
-
-                    <label for="">Option B</label>
-                    <input type="text" 
-                            name="choice_b" 
-                            class="form-control" 
-                            required><br>
-
-                    <label for="">Option C</label>
-                    <input type="text" 
-                            name="choice_c" 
-                            class="form-control"><br>
-
-                    <label for="">Option D</label>
-                    <input type="text" 
-                            name="choice_d" 
-                            class="form-control"><br>
-                    
-                    <label for="">Correct Option</label>
-                    <input type="number" 
-                            name="correct_choice" 
-                            class="form-control"><br>
-                    
-                    <div class="container my-3">
-                        <div class="col-md-12 text-center">
-                            <button type="submit" 
-                                    class="btn btn-success" 
-                                    
-                                    name="addQuestion">Submit</button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-            
-
-        </div>
-    </div> --> -->
 </body>
 </html>
