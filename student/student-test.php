@@ -22,6 +22,7 @@ $id = $_GET['id'];
 <div class="container">
     <div class="col-lg-8 m-auto d-block">
 <?php
+
     $q = "SELECT * FROM question WHERE test_id = '$id';";
     $query = mysqli_query($con, $q);
 
@@ -46,6 +47,7 @@ $id = $_GET['id'];
 
                 </div>
             
+
 
         <?php
             }
