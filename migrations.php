@@ -117,6 +117,21 @@ else {
 
 echo "<br>";
 
+//Result
+$sql = "CREATE TABLE IF NOT EXISTS result (
+    response_id INT NOT NULL AUTO_INCREMENT,
+    test_id INT NOT NULL,
+    full_name varchar(255) NOT NULL,
+    final_result INT NOT NULL,
+    FOREIGN KEY (test_id) REFERENCES test(test_id), 
+    PRIMARY KEY (response_id)
+    );";
+if(mysqli_query($con, $sql)) {
+    echo "Result table created successfully!";
+}
+else {
+    echo "Error creating table Student: " .mysqli_error($con);
+}
 
 // Add more tables here
 

@@ -11,7 +11,7 @@ if(!isset($_SESSION['name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educator Dashboard</title>
+    <title>Student Dashboard</title>
     <?php
     require_once "../connection.php";
 
@@ -39,7 +39,6 @@ if(!isset($_SESSION['name'])) {
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-input">
         <input type="text" id="testid" name="testid" placeholder="Test ID"><br><br>
-        <label for="testid"></label>
         </div>
         
         <button type="submit" name="submit" value="Take Test" >Take a Test</button>
