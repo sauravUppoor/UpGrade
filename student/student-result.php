@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Student Result</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <?php include "../static/links/bootstrap.php" ?>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/edu-dashboard.css">
+
+    <!-- IonIcons -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </head>
+
 <body>
+    <?php
+        include "../templates/navbar.php";
+    ?>
+    <br>
+
+    <div class="contain">
+        <a href="student-dashboard.php"> <ion-icon name="arrow-back-outline" size="large"></ion-icon> </a>
+        <h1>Test Result</h1>
+    </div>
+    <br>
     <div class="container text-center">
     <table class="table text-center table-bordered table-hover">
         <tr>
@@ -21,8 +38,9 @@
         <?php
 
     // For $_SERVER, we need to start the session
-    session_start();
-    require_once "../connection.php";
+        session_start();
+        require_once "../connection.php";
+
     //$id = $_GET['id'];
     $id = $_SESSION['testid'];
 

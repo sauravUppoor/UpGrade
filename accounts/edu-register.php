@@ -93,7 +93,7 @@ session_start();
     <br>
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="con-form">
-        <h1><span style = "color: #6555df; font-weight:700;">EDUCATOR</span> <span style="font-weight:400;">SignUp</span></h1>
+            <h1><span style = "color: #6555df; font-weight:700;">EDUCATOR</span> <span style="font-weight:400;">SignUp</span></h1>
             <div class="con-inputs">
                 <div class="con-input">
                     <label for="name">
