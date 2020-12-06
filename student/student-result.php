@@ -50,12 +50,13 @@
                 $q = "SELECT * FROM question WHERE test_id='$id';";
                 $query = mysqli_query($con, $q);
                 $cnt = mysqli_num_rows($query);
-                echo "Out of ".$cnt.", you have selected ".$count." options";
+                echo "Out of ".$cnt.", you have attempted ".$count." questions";
                 ?>
                 </td>
                 </tr>
                 <?php
                 $result = 0;
+                $total=0;
                 // $i = 1;
                 $selected = $_POST['quizcheck'];
                 // print_r($selected);
@@ -63,11 +64,14 @@
             
                 
                 while( $rows = mysqli_fetch_array($query) ){
+                    $total += $rows['marks'];
                     // print_r($rows['correct_choice']);
                     // print_r($selected[$rows['question_id']]);
                     if(!empty($selected[$rows['question_id']])){
                         $checked = $rows['correct_choice'] == $selected[$rows['question_id']];
-                    
+
+                       
+                        
                         if($checked){
                             $result += $rows['marks'];
                         }
@@ -81,7 +85,7 @@
                     <td> Your Total Score </td>
                     <td colspan="2">
                         <?php
-                            echo "Your Score is ".$result;
+                            echo $result.'/'.$total;
 
                         ?>
                     </td>

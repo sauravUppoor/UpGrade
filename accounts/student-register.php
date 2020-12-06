@@ -161,7 +161,7 @@ session_start();
                 <button name="submit"
                         type="submit"
                         class="btn-signin">
-                    Sign In
+                    Sign Up
                 </button>
             </footer>
         </div>
