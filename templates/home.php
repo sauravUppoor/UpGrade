@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="../static/css/navbar.css"> -->
     <link rel="stylesheet" href="../static/css/home.css">
 
-    
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
 </head>
 <body>
@@ -54,23 +54,63 @@
     
     <div class="content">
         <div class="slider from-left">
-            <h2>What's in it</h2>
+            <p>Everything you need to create perfect tests</p>
         </div>
         
         <div class="columns">
             <div class="col fade-in">
-                <h3>Lorem, ipsum dolor.</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, numquam.
-                </p>
+                <div class="gd icon-contain">
+                    <ion-icon name="build-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd">
+                    <h3>Customizable Questions</h3>
+                    <p>Caters all types of questions from single choice, multiple choice, fill in the blanks and match the pairs.</p>
+                </div>
             </div>
             <div class="col fade-in">
-                <h3>Lorem, ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellat!</p>
+                <div class="gd icon-contain">
+                    <ion-icon name="calendar-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd icon-contain">
+                    <h3>Schedule Tests</h3>
+                    <p>Flexibly generate timings as per your needs, open and close quiz whenever you want.</p>
+                </div>
             </div>
             <div class="col fade-in">
-                <h3>Lorem, ipsum dolor.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, velit?</p>
+                <div class="gd icon-contain">
+                    <ion-icon name="bar-chart-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd">
+                    <h3>Statistical Reports </h3>
+                    <p>Detailed reports for each tests along with key insights regarding students' doubts.</p>
+                </div>
+            </div>
+            <div class="col fade-in">
+                <div class="gd icon-contain">
+                    <ion-icon name="cloud-upload-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd">
+                    <h3>Upload Assignments</h3>
+                    <p>Student can upload the desired documents for assessments too.</p>
+                </div>
+            </div>
+            <div class="col fade-in">
+                <div class="gd icon-contain">
+                    <ion-icon name="bookmarks-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd">
+                    <h3>Bookmark Questions</h3>
+                    <p>Note down questions for later references.</p>
+                </div>
+            </div>
+            <div class="col fade-in">
+                <div class="gd icon-contain">
+                    <ion-icon name="help-circle-outline" size="large"></ion-icon>
+                </div>
+                <div class="gd">
+                    <h3>Resolve Queries</h3>
+                    <p>Answer queries and clarifications raised by students for quiz questions.</p>
+                </div>
             </div>
         </div>
     </div>

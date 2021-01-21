@@ -49,6 +49,7 @@ header {
     color: var(--text);
     font-size: 1rem;
 }
+
 .site-logo {
     text-decoration: none;
     font-size: 1.3rem;
@@ -59,7 +60,7 @@ header {
 
 .nav__list {
     align-items: center;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     text-transform: capitalize;
     display: flex;
@@ -96,15 +97,16 @@ header {
 }
 
 .nav__link--btn {
-    padding: 10px 20px;
+    padding: 12px 32px !important;
     background-color: #6555df;
     border: 0px;
     border-radius: 18px;
     margin: 0px 10px 0px 0px;
     color: #FFF;
-    font-size: 1.1rem;
+    font-size: 16px;
     box-shadow: 0px 8px 16px 0px rgba(101, 85, 223, 0.5);
     text-transform: capitalize;
+    letter-spacing: .025em;
 }
   
 .nav__link--btn:hover {
@@ -181,22 +183,23 @@ h1 {
 }
 
 .cta {
-    margin: 20px;
+    margin: 40px;
     min-width: 1000px;
     text-align: center;
 }
 
 .cta-btn {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: 0.5px;
-    padding: 12px 36px;
+    padding: 12px 32px;
     margin: 0px;
+    letter-spacing: .035em;
 }
 
 .cta p {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.5px;
     color: #F1F3F6;
     padding: 10px;
@@ -205,16 +208,49 @@ h1 {
 /* -------------------------------------*/
 
 .content {
-    margin: 60px;
+    padding: 80px 0px;
     text-align: center;
 }
 
 .columns {
-    display: flex;
+    display: grid;
+    text-align: center;
+    padding: 0px 30px;
+    justify-content: space-around;
+    grid-template-columns: 32% 32% 32%;
+    grid-row-gap: 26px;
+    grid-column-gap: 16px;
 }
 
 .col {
-    margin-left: 1.5em;
+    display: flex;
+    margin: 6px;
+    text-align: left;
+}
+
+ion-icon {
+    padding: 16px;
+    background-color: #867cd348;
+    border-radius: 16px;
+}
+
+.gd {
+    margin: 12px;
+}
+
+.gd h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 0.025rem;
+}
+
+.gd p {
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: .025rem;
+    color: #363636;
 }
 
 .fade-in {
@@ -224,6 +260,12 @@ h1 {
 
 .fade-in.appear {
     opacity: 1;
+}
+
+.slider {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0px 0px 96px 0px;
 }
 
 .from-left {
