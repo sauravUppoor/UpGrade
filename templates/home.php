@@ -30,7 +30,7 @@
         <nav class="account">
             <ul class="nav__list">
             <li class="nav__list-item">
-                <a class="nav__link nav__link--btn" href="#">Login</a>
+                <a class="nav__link btn primary" href="#">Login</a>
             </li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
             <br>
             <div class="cta">
                 <p>Give UpGrade a try!</p>
-                <a class="nav__link nav__link--btn cta-btn" href="#">Get Started</a>
+                <a class="btn secondary nav__link nav__link--btn cta-btn" href="#">Get Started</a>
             </div>
         </div>
     </section>
@@ -112,6 +112,21 @@
                     <p>Answer queries and clarifications raised by students for quiz questions.</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="act-card fade-in">
+            <div class="content-part">
+            <div class="text-part">
+                <p class="card-head">Have any questions?</p>
+                <p class="card-body">Drop us your queries and we will get it resolved at the earliest. Feel free to send in your suggestions and feedbacks. We value your voice! </p>
+            </div>
+            <a class="nav__link btn cta-btn tertiary" href="#">Drop a message</a>
+            </div>
+            <div class="act-card-img">
+                <img src="../static/img/question.png" alt="">
+            </div>
+            
         </div>
     </div>
     <div class="content">
