@@ -206,7 +206,7 @@ h1 {
 }
 
 .product-name {
-    color: #6555df;
+    color: var(--secondary);
     font-size: 28px;
     font-weight: 400;
 }
@@ -362,3 +362,28 @@ ion-icon {
     background-color: #333;
     
 } */
+
+/* ---------------------------------- */
+
+footer {
+    background-color: var(--tertiary);
+    text-align: center;
+    align-items: center;
+    color: #F1F3F6;
+    margin-top: 40px;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.footer-content > a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2;
+}
+
+.footer-content > a:hover {
+    text-decoration: underline;
+}

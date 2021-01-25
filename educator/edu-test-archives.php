@@ -55,18 +55,16 @@ session_start();
                     <th> Edit Test </th>
                 </tr>
                 <?php
+                    $current_user_id = $_SESSION['user-id'];
 
-
-
-                    $q = "SELECT * FROM test";
+                    $q = "SELECT * FROM test WHERE created_by = '$current_user_id'";
 
                     $query = mysqli_query($con,$q);
 
                     while($res = mysqli_fetch_array($query)) {
-
-
                 ?>
                 <tr class="text-center">
+                    
                     <td> <?php echo $res['test_id']; ?> </td>
                     <td> <?php echo $res['name']; ?></td>
                     <td> <?php echo $res['total_marks']; ?> </td>
