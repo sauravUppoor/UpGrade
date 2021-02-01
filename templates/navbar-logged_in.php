@@ -5,9 +5,9 @@
             Test App
         </div>
         <ul>
-            <li><a href = "" class="active">Home</a></li>
-            <li><a href = "">About</a></li>
-            <li><a href = "">Contact</a></li>
+            <li><a href = "../templates/home.php" class="active">Home</a></li>
+            <li><a href = "../templates/home.php#about-us">About</a></li>
+            <li><a href = "../templates/home.php#contact-us">Contact</a></li>
         </ul>
         <div class="con-btn">
             <a href="../accounts/logout.php"> <button>

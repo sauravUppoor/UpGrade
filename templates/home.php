@@ -18,12 +18,12 @@
 
         <nav class="main-nav">
             <ul class="nav__list">
-            <li class="nav__list-item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__list-item"><a href="#top" class="nav__link">Home</a></li>
             <li class="nav__list-item">
-                <a href="#" class="nav__link">About</a>
+                <a href="#about-us" class="nav__link">About</a>
             </li>
             <li class="nav__list-item">
-                <a href="#" class="nav__link">Contact</a>
+                <a href="#contact-us" class="nav__link">Contact</a>
             </li>
             </ul>
         </nav>
@@ -36,7 +36,7 @@
         </nav>
     </header>
     <main>
-        <section class="sectionOne">
+        <section class="sectionOne" id="top">
             <div class="containerOne">
                 <div class="s1h1">
                 <h1>Want to create your own tests?</h1> 
@@ -51,70 +51,73 @@
                 </div>
             </div>
         </section>
+        <br><br><br>
+        <section id="about-us">
+            <div class="content">
+                <div class="slider from-left">
+                    <p>Everything you need to create perfect tests</p>
+                </div>
+                
+                <div class="columns">
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="build-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd">
+                            <h3>Customizable Questions</h3>
+                            <p>Caters all types of questions from single choice, multiple choice, fill in the blanks and match the pairs.</p>
+                        </div>
+                    </div>
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="calendar-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd icon-contain">
+                            <h3>Schedule Tests</h3>
+                            <p>Flexibly generate timings as per your needs, open and close quiz whenever you want.</p>
+                        </div>
+                    </div>
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="bar-chart-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd">
+                            <h3>Statistical Reports </h3>
+                            <p>Detailed reports for each tests along with key insights regarding students' doubts.</p>
+                        </div>
+                    </div>
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="cloud-upload-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd">
+                            <h3>Upload Assignments</h3>
+                            <p>Student can upload the desired documents for assessments too.</p>
+                        </div>
+                    </div>
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="bookmarks-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd">
+                            <h3>Bookmark Questions</h3>
+                            <p>Note down questions for later references.</p>
+                        </div>
+                    </div>
+                    <div class="col fade-in">
+                        <div class="gd icon-contain">
+                            <ion-icon name="help-circle-outline" size="large"></ion-icon>
+                        </div>
+                        <div class="gd">
+                            <h3>Resolve Queries</h3>
+                            <p>Answer queries and clarifications raised by students for quiz questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="content">
-            <div class="slider from-left">
-                <p>Everything you need to create perfect tests</p>
-            </div>
-            
-            <div class="columns">
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="build-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd">
-                        <h3>Customizable Questions</h3>
-                        <p>Caters all types of questions from single choice, multiple choice, fill in the blanks and match the pairs.</p>
-                    </div>
-                </div>
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="calendar-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd icon-contain">
-                        <h3>Schedule Tests</h3>
-                        <p>Flexibly generate timings as per your needs, open and close quiz whenever you want.</p>
-                    </div>
-                </div>
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="bar-chart-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd">
-                        <h3>Statistical Reports </h3>
-                        <p>Detailed reports for each tests along with key insights regarding students' doubts.</p>
-                    </div>
-                </div>
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="cloud-upload-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd">
-                        <h3>Upload Assignments</h3>
-                        <p>Student can upload the desired documents for assessments too.</p>
-                    </div>
-                </div>
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="bookmarks-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd">
-                        <h3>Bookmark Questions</h3>
-                        <p>Note down questions for later references.</p>
-                    </div>
-                </div>
-                <div class="col fade-in">
-                    <div class="gd icon-contain">
-                        <ion-icon name="help-circle-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="gd">
-                        <h3>Resolve Queries</h3>
-                        <p>Answer queries and clarifications raised by students for quiz questions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content">
+        <div class="content" id="contact-us">
             <div class="act-card fade-in">
                 <div class="content-part">
                     <div class="text-part">
