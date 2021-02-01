@@ -5,6 +5,7 @@ session_start();
 if(!isset($_SESSION['name'])) {
     header('location:../accounts/edu-login.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +54,7 @@ if(!isset($_SESSION['name'])) {
                     <th> Invite Code </th>
                     <th> Test Name </th>
                     <th> Total Marks </th>
-                    <th> Delete Test </th>
+                    <th> Results </th>
                     <th> Edit Test </th>
                 </tr>
                 <?php
@@ -71,10 +72,10 @@ if(!isset($_SESSION['name'])) {
                     <td> <?php echo $res['name']; ?></td>
                     <td> <?php echo $res['total_marks']; ?> </td>
                     <td>
-                        <a href="delete.php?id=<?php 
-                            echo $res['id']; ?>"> 
+                        <a href="edu-test-result.php?id=<?php 
+                            echo $res['test_id']; ?>"> 
                             <div class="text-white">
-                            <ion-icon name="trash-outline" size="large" class="red"></ion-icon>
+                            <ion-icon name="eye-outline" size="large" class="red"></ion-icon>
                             </div> </a>
                     </td>
                     <td>

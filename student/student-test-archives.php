@@ -56,7 +56,7 @@ if(!isset($_SESSION['name'])) {
                 <?php
                     $current_user_id = $_SESSION['user-id'];
 
-                    $cnt = 0;
+                    $cnt = 1;
 
                     $q = "SELECT * FROM result WHERE student_id = '$current_user_id'";
 
