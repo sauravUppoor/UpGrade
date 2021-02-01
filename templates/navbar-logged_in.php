@@ -1,8 +1,8 @@
 
 
     <div class="nav">
-        <div class="con-logo">
-            Test App
+        <div class="con-logo" style="font-weight: 600; font-size: 20px">
+            UpGrade
         </div>
         <ul>
             <li><a href = "../templates/home.php" class="active">Home</a></li>
