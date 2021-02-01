@@ -47,7 +47,7 @@ if(!isset($_SESSION['name'])) {
 </head>
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
     <div class="contain">
         <h1>Welcome, <?php echo $_SESSION['name']; ?> !</h1>
@@ -78,7 +78,7 @@ if(!isset($_SESSION['name'])) {
         <div class="or mg-auto container">or</div>
         <br><br>
         <div class="container mg-auto">
-            <a href="./edu-test-archives.php">
+            <a href="./student-test-archives.php">
             <button class="btn-1"> <ion-icon name="folder-open-outline" size="large"></ion-icon> <br>Test Results</button> </a>
         </div>
         

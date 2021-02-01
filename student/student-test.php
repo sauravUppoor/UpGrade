@@ -49,7 +49,7 @@ $id = $_GET['id'];
 
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
 <form action="student-result.php" method="post">
 <div class="container">

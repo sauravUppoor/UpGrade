@@ -10,8 +10,8 @@
             <li><a href = "">Contact</a></li>
         </ul>
         <div class="con-btn">
-            <a href="../templates/login.php"> <button>
-                LOGIN
+            <a href="../accounts/logout.php"> <button>
+                LOGOUT
             </button> </a>
         </div>
     </div>

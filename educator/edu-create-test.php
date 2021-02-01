@@ -58,7 +58,7 @@ if(isset($_POST['submit'])) {
 <body>
 
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
     <br>
     <div class="contain">

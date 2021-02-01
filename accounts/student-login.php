@@ -61,7 +61,7 @@ session_start();
                 $dbname = $row['full_name'];
                 
                 // Use these variables on any php page as long as session is on
-                $_SESSION['id'] = $dbid;
+                $_SESSION['user-id'] = $dbid;
                 $_SESSION['name'] = $dbname;
 
                 ?>

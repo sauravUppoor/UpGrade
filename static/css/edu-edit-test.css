@@ -1,0 +1,74 @@
+* {
+    transition: all 0.25s ease-in !important;
+}
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.bg-none, .bg-none:hover, .bg-none:active {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-info {
+    padding: 10px 20px;
+    background-color :#6555df;
+    border: 0px;
+    border-radius: 18px;
+    margin-right: 10px;
+    color: #FFF;
+    font-size: 1.1rem;
+    box-shadow: 0px 8px 16px 0px rgba(101, 85, 223, 0.5);
+}
+
+.btn-info:hover, .btn-info:visited, .btn-info:active {
+    transform: translate(0px,5px);
+    box-shadow: none;
+    background-color :#6555df;
+}
+
+.invite-code {
+    /* background-color: rgba(170, 170, 170, 0.822); */
+    color: #6555df;
+    border-radius: 16px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.invite-code > input {
+    color: #6555df;
+    font-size: 24px;
+    background-color: #FFF;
+    margin: 0px 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.invite-code > p {
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    margin: 0px !important;
+}
+
+.invite-code > button {
+    margin-right: 70px;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #6555df;
+}
+
+.add-Q {
+    margin-left: auto;
+}

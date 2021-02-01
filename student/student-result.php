@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@
 
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
     <br>
 
@@ -96,8 +95,9 @@
         }
 
         
-        $name = $_SESSION['name'];
-        $fresult = "INSERT INTO result(test_id, full_name, final_result) VALUES ('$id','$name','$result');";
+        $user = $_SESSION['user-id'];
+
+        $fresult = "INSERT INTO result(test_id, student_id, final_result) VALUES ('$id','$user','$result');";
 
         $qresult = mysqli_query($con, $fresult);
 

@@ -2,7 +2,9 @@
 
 require_once "../connection.php";
 session_start();
-
+if(!isset($_SESSION['name'])) {
+    header('location:../accounts/edu-login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ session_start();
 </head>
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
     <br>
     <div class="contain">

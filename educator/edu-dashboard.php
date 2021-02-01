@@ -25,7 +25,7 @@ if(!isset($_SESSION['name'])) {
 </head>
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
 
     <div class="contain">

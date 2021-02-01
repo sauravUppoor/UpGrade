@@ -1,8 +1,11 @@
 <?php
 
 require_once "../connection.php";
+session_start();
 $id = $_GET['id'];
-
+if(!isset($_SESSION['name'])) {
+    header('location:../accounts/edu-login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,50 +20,15 @@ $id = $_GET['id'];
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="../static/css/form.css">
     <link rel="stylesheet" href="../static/css/edu-dashboard.css">
+    <link rel="stylesheet" href="../static/css/edu-edit-test.css">
 
     <!-- IonIcons -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
-    <style>
-        * {
-            transition: all 0.25s ease-in !important;
-        }
-        .green {
-            color: green;
-        }
-
-        .red {
-            color: red;
-        }
-
-        .bg-none, .bg-none:hover, .bg-none:active {
-            background-color: transparent;
-            border: none;
-        }
-
-        .btn-info {
-            padding: 10px 20px;
-            background-color :#6555df;
-            border: 0px;
-            border-radius: 18px;
-            margin-right: 10px;
-            color: #FFF;
-            font-size: 1.1rem;
-            box-shadow: 0px 8px 16px 0px rgba(101, 85, 223, 0.5);
-        }
-
-        .btn-info:hover, .btn-info:visited, .btn-info:active {
-            transform: translate(0px,5px);
-            box-shadow: none;
-            background-color :#6555df;
-        }
-
-    </style>
-
 </head>
 <body>
     <?php
-        include "../templates/navbar.php";
+        include "../templates/navbar-logged_in.php";
     ?>
     <br>
     <div class="contain">
@@ -90,9 +58,15 @@ $id = $_GET['id'];
             
             <br>
 
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addQModal">Add Question</button>
-                <br>
+            <div class="invite-code">
+                <p>Invite Code</p>
+                <input type="text" value="<?php echo $id; ?>" id="invite-text" disabled>
+                <button onclick="copyText()">
+                    <ion-icon name="copy-outline" size="small"></ion-icon>
+                </button>
+                <button type="button" class="btn btn-info add-Q" data-toggle="modal" data-target="#addQModal">
+                    Add Question
+                </button>
             </div>
 
             <br><br>
@@ -433,6 +407,18 @@ $id = $_GET['id'];
                 }
 
             );
+        }
+
+        function copyText() {
+            var copyCode = document.getElementById('invite-text');
+            console.log(copyCode);
+                
+            copyCode.select();
+                // copyCode.setSelectionRange(0,99999);
+
+            document.execCommand("copy");
+
+            alert("Copied!");
         }
 
     </script>
