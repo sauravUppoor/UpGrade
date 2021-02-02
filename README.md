@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/logo.png" alt="Logo" height="50">
+  <img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/logo.png" alt="Logo" height="100">
   <h3 align="center">UpGrade - Assessment App</h3>
 
   <p align="center">
