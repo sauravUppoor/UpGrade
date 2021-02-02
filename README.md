@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <img src="https://github.com/sauravUppoor/assessment_app/static/images/logo.png" alt="Logo" height="50">
+  <img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/logo.png" alt="Logo" height="50">
   <h3 align="center">UpGrade - Assessment App</h3>
 
   <p align="center">
@@ -71,8 +71,8 @@ To setup and run this project locally follow the steps below.
 
 ## Created By
 
-<li> [Raj Singh] (https://github.com/rajsinh2181) </li>
-<li> [Ritwik Vaidya] (https://github.com/ritwik4690) </li>
-<li> [Saurav Uppoor] (https://github.com/sauravUppoor) </li>
+<li> <a href="https://github.com/rajsinh2181">Raj Singh</a> </li>
+<li> <a href="https://github.com/ritwik4690">Ritwik Vaidya</a> </li>
+<li> <a href="https://github.com/sauravUppoor">Saurav Uppoor</a> </li>
 
 
