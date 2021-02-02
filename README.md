@@ -1,5 +1,6 @@
 <br />
 <p align="center">
+  <img src="https://github.com/sauravUppoor/book_ecommerce/static/images/logo.png" alt="Logo" height="50">
   <h3 align="center">UpGrade - Assessment App</h3>
 
   <p align="center">
@@ -24,12 +25,12 @@ UpGrade is an online system for educators to create assessments for their course
 
 ### Features
 
-##### Educator
+#### Educator
 
 <li> <b>Create tests</b> Educators can create tests consisting of multiple choice questions and invite students to take the tests. </li>
 <li> <b>Test results analysis</b> Each test results and analysis can be viewed by the educator. </li>
 
-##### Student
+#### Student
 
 <li> <b>Take tests</b> Students can take tests using invite codes of corresponding tests. </li>
 <li> <b>Test reports</b> Reports are generated after submission of a test. </li>
