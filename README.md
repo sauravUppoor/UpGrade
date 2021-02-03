@@ -1,19 +1,12 @@
 <br />
 <p align="center">
   <img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/logo.png" alt="Logo" height="100">
-  <h3 align="center">UpGrade - Assessment App</h3>
+  <!-- <h3 align="center">UpGrade - Assessment App</h3> -->
 
   <p align="center">
     An online test management system which allows users to create and take tests and upload assigments.
     <br />
-    <a href="https://github.com/sauravUppoor/assessment_app"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="#">View Demo</a>
-    ·
-    <a href="https://github.com/sauravUppoor/assessment_app/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/sauravUppoor/assessment_app/issues">Request Feature</a>
+    Project Demo
   </p>
 </p>
 
