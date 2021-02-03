@@ -19,7 +19,7 @@
 
 ## About The Project
 
-<img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/screen-grab.gif" alt="Logo" height="300">
+<img align="center" src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/screen-grab.gif" alt="Logo" height="100%">
 
 UpGrade is an online system for educators to create assessments for their courses to assess students. This project was created as final mini-project for semester 5 course Web Development & Database Management System Lab. 
 
