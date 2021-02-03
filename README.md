@@ -24,21 +24,6 @@ UpGrade is an online system for educators to create assessments for their course
 <li> <b>Take tests</b> Students can take tests using invite codes of corresponding tests. </li>
 <li> <b>Test reports</b> Reports are generated after submission of a test. </li>
 
-## Technology Stack
-
-### Frontend
-
-<li> HTML </li>
-<li> CSS </li>
-<li> Bootstrap </li>
-<li> JavaScript </li>
-<li> jQuery </li>
-
-### Backend
-
-<li> PHP </li>
-<li> MySQL </li>
-
 ## Getting Started
 
 To setup and run this project locally follow the steps below.
@@ -58,10 +43,25 @@ To setup and run this project locally follow the steps below.
     https://localhost/assessment_app/templates/home.php
     ```
 
+## Technology Stack
+
+### Frontend
+
+<li> HTML </li>
+<li> CSS </li>
+<li> Bootstrap </li>
+<li> JavaScript </li>
+<li> jQuery </li>
+
+### Backend
+
+<li> PHP </li>
+<li> MySQL </li>
+
+
 ## Created By
 
 <li> <a href="https://github.com/rajsinh2181">Raj Singh</a> </li>
 <li> <a href="https://github.com/ritwik4690">Ritwik Vaidya</a> </li>
 <li> <a href="https://github.com/sauravUppoor">Saurav Uppoor</a> </li>
-
 
