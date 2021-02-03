@@ -5,8 +5,7 @@
 
   <p align="center">
     An online test management system which allows users to create,take tests and upload assignments.
-    <br /><br />
-    Project Demo
+    <br />
   </p>
 </p>
 
