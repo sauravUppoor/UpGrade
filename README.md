@@ -4,8 +4,8 @@
   <!-- <h3 align="center">UpGrade - Assessment App</h3> -->
 
   <p align="center">
-    An online test management system which allows users to create and take tests and upload assigments.
-    <br />
+    An online test management system which allows users to create,take tests and upload assignments.
+    <br /><br />
     Project Demo
   </p>
 </p>
@@ -42,24 +42,15 @@ To setup and run this project locally follow the steps below.
 
 ## Technology Stack
 
-### Frontend
-
 <li> HTML </li>
 <li> CSS </li>
 <li> Bootstrap </li>
 <li> JavaScript </li>
 <li> jQuery </li>
-
-### Backend
-
 <li> PHP </li>
 <li> MySQL </li>
 
 
 ## Created By
 
-<li> <a href="https://github.com/rajsinh2181">Raj Singh</a> </li>
-<li> <a href="https://github.com/ritwik4690">Ritwik Vaidya</a> </li>
-<li> <a href="https://github.com/sauravUppoor">Saurav Uppoor</a> </li>
-
-as academic mini-project for WDL and DBMS, Semester 5.
+<a href="https://github.com/rajsinh2181">Raj Singh</a>, <a href="https://github.com/ritwik4690">Ritwik Vaidya</a> and <a href="https://github.com/sauravUppoor">Saurav Uppoor</a> as academic mini-project for WDL and DBMS, Semester 5.
