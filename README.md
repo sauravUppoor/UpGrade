@@ -15,9 +15,6 @@
 <p align="center">
   <img src="https://github.com/sauravUppoor/assessment_app/blob/main/static/img/screen-grab-comp.gif" alt="Logo" height="100%" width="550px">
 </p>
-UpGrade is an online system for educators to create assessments for their courses to assess students. This project was created as final mini-project for semester 5 course Web Development & Database Management System Lab. 
-
-### Features
 
 <li> <b>Create tests</b> Educators can create tests consisting of multiple choice questions and invite students to take the tests. </li>
 <li> <b>Test results analysis</b> Each test results and analysis can be viewed by the educator. </li>
@@ -65,3 +62,4 @@ To setup and run this project locally follow the steps below.
 <li> <a href="https://github.com/ritwik4690">Ritwik Vaidya</a> </li>
 <li> <a href="https://github.com/sauravUppoor">Saurav Uppoor</a> </li>
 
+as academic mini-project for WDL and DBMS, Semester 5.
