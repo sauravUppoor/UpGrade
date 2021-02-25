@@ -7,7 +7,7 @@
 
     
     <!-- <link rel="stylesheet" href="../static/css/navbar.css"> -->
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
 
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
