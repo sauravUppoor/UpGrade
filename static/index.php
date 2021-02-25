@@ -30,7 +30,7 @@
         <nav class="account">
             <ul class="nav__list">
             <li class="nav__list-item">
-                <a class="nav__link btn primary" href="./login.php">Login</a>
+                <a class="nav__link btn primary" href="../templates/login.php">Login</a>
             </li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
                 <br>
                 <div class="cta">
                     <p>Give UpGrade a try!</p>
-                    <a class="btn primary nav__link nav__link--btn cta-btn" href="./login.php">Get Started</a>
+                    <a class="btn primary nav__link nav__link--btn cta-btn" href="../templates/login.php">Get Started</a>
                 </div>
             </div>
         </section>
