@@ -7,7 +7,7 @@
 
     
     <!-- <link rel="stylesheet" href="../static/css/navbar.css"> -->
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../static/css/home.css">
 
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
@@ -30,7 +30,7 @@
         <nav class="account">
             <ul class="nav__list">
             <li class="nav__list-item">
-                <a class="nav__link btn primary" href="./login.php">Login</a>
+                <a class="nav__link btn primary" href="../templates/login.php">Login</a>
             </li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
                 <br>
                 <div class="cta">
                     <p>Give UpGrade a try!</p>
-                    <a class="btn primary nav__link nav__link--btn cta-btn" href="./login.php">Get Started</a>
+                    <a class="btn primary nav__link nav__link--btn cta-btn" href="../templates/login.php">Get Started</a>
                 </div>
             </div>
         </section>
