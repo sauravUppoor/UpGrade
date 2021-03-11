@@ -35,7 +35,7 @@ require_once "../connection.php";
 
 if(isset($_POST['submit'])) {
     $tname = $_POST['tname'];
-    $created = $_SESSION['id'];
+    $created = $_SESSION['user-id'];
 
     $sql = "INSERT INTO test (created_by, name, total_marks) VALUES ('$created', '$tname', '0');";
     
